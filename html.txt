@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Line-up">
+<meta name="keywords" content="Line-up">
+
+<link rel="canonical" href="https://www.tomorrowland.com/en/festival/line-up">
+
+  
+
+  <title>Line-up - Festival -  Tomorrowland</title>
+
+        <link rel="stylesheet" href="/src/Frontend/Cache/MinifiedCss/0d3480302188c33c8183c2017899006b.css?202312051359" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/Frontend/Themes/tomorrowland/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/Frontend/Themes/tomorrowland/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/Frontend/Themes/tomorrowland/favicon-16x16.png">
+  <link rel="manifest" href="/src/Frontend/Themes/tomorrowland/site.webmanifest">
+  <link rel="mask-icon" href="/src/Frontend/Themes/tomorrowland/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#000000">
+
+    <meta property="og:title" content="Tomorrowland">
+      <meta property="og:description" content="Live Today, Love Tomorrow, Unite Forever.">
+    <meta property="og:image" content="/src/Frontend/Themes/tomorrowland/Core/Layout/images/opengraph/festival-2022.jpg">
+  
+    <script>
+if(window.location.protocol != 'https:' && window.location.hostname=='www.tomorrowland.com') { location.href = location.href.replace("http://", "https://"); }</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37589046-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+  ga('create', 'UA-119986681-1', 'auto', {'name':'sunweb'});
+  ga('sunweb.send', 'pageview');
+  ga('sunweb.set', 'anonymizeIp', true);
+</script>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1235275563285333');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" src="https://www.facebook.com/tr?id=1235275563285333&ev=PageView&noscript=1"/>
+</noscript>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 858075488;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/858075488/?guid=ON&script=0"/>
+</div>
+</noscript>
+<script id="Cookiebot" data-culture="EN" src="https://consent.cookiebot.com/uc.js" data-cbid="582188e7-ff3f-4517-9dab-0827a539c230" type="text/javascript" async></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31G6SEC8VN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-31G6SEC8VN');
+</script>
+
+<!-- AdGlare: Pop up player - NYE home -->
+<script>
+    (function(r,d,u) {
+        var s = d.createElement(r); s.async = true;
+        u += '&cb=' + Date.now() + Math.random();       
+        s.src = u; var n = d.getElementsByTagName(r)[0];
+        n.parentNode.insertBefore(s, n);
+    })('script',document,'//tomorrowland.engine.adglare.net/?355443450');
+</script>
+
+   <script>
+                                !function (w, d, t) {
+                                  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+                                
+                                  ttq.load('C3A91A0EDD9FRVMRL760');
+                                  ttq.page();
+                                }(window, document, 'ttq');
+                </script>
+
+<script data-obct type = "text/javascript">
+  /** DO NOT MODIFY THIS CODE**/
+  !function(_window, _document) {
+    var OB_ADV_ID = '0022504707c872e7a5d37d132898df923d';
+    if (_window.obApi) {
+      var toArray = function(object) {
+        return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
+      };
+      _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
+      return;
+    }
+    var api = _window.obApi = function() {
+      api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
+    };
+    api.version = '1.1';
+    api.loaded = true;
+    api.marketerId = OB_ADV_ID;
+    api.queue = [];
+    var tag = _document.createElement('script');
+    tag.async = true;
+    tag.src = '//amplify.outbrain.com/cp/obtp.js';
+    tag.type = 'text/javascript';
+    var script = _document.getElementsByTagName('script')[0];
+    script.parentNode.insertBefore(tag, script);
+  }(window, document);
+
+  obApi('track', 'PAGE_VIEW');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCP8Z6Q');</script>
+<!-- End Google Tag Manager -->
+<script>var jsData = {"FRONTEND_LANGUAGE":"en"}</script>
+</head>
+
+<body class="en section-festival layout-2022 layout-tickets" itemscope itemtype="http://schema.org/WebPage">
+
+      
+    <tml-topbar></tml-topbar>
+
+    <div class="page-wrapper">
+
+              
+  <div class="mobile-nav__wrapper-placeholder">
+  <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__toggler-wrapper">
+      <div class="mobile-nav__toggler-wrapper-inner">
+        <a class="mobile-nav__title">
+          <span class="world">Belgium</span>
+        </a>
+
+        <button type="button" class="mobile-nav__toggle">
+  <span class="text">Menu</span>
+  <span class="icon">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </span>
+</button>
+      </div>
+    </div>
+
+
+    <div class="mobile-nav mobile-nav--default" role="navigation" id="slide-nav">
+
+      <div class="mobile-nav__top">
+        
+        <nav class="mobile-nav__language-nav">
+                                  
+      <ul class="lang-nav">
+              <li class="selected">
+          <a>EN</a>
+        </li>
+              <li>
+          <a href="/nl/festival/line-up">NL</a>
+        </li>
+              <li>
+          <a href="/fr/festival/line-up">FR</a>
+        </li>
+          </ul>
+          </nav>
+      </div>
+
+      <nav class="mobile-nav__list mobile-nav__list--default">
+          <ul>
+                      
+      <li class="open">
+        <a href="/en/festival/welcome" class="has-children">
+          Festival
+          <span class="caret"></span>        </a>
+          <ul>
+                      
+      <li>
+        <a href="/en/festival/welcome">
+          Welcome
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/festival/practical">
+          Practical
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/festival/ticket-sales">
+          Ticket Sales
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/festival/tickets">
+          Tickets 
+                  </a>
+        
+      </li>
+                      
+      <li class="open">
+        <a href="/en/festival/line-up">
+          Line-up
+                  </a>
+        
+      </li>
+                      
+      <li class="cta-list-item">
+        <a href="/en/my-tomorrowland" target="_blank">
+          Pre-Register Now
+                  </a>
+        
+      </li>
+      </ul>
+
+      </li>
+                      
+      <li>
+        <a href="/en/dreamville/welcome" class="has-children">
+          DreamVille
+          <span class="caret"></span>        </a>
+          <ul>
+                      
+      <li>
+        <a href="/en/dreamville/welcome">
+          Welcome
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/dreamville/practical">
+          Practical
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/dreamville/dreamville-packages">
+          DreamVille Packages
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/dreamville/discover-dreamville">
+          Discover DreamVille
+                  </a>
+        
+      </li>
+      </ul>
+
+      </li>
+                      
+      <li>
+        <a href="/en/global-journey/welcome" class="has-children">
+          Global Journey
+          <span class="caret"></span>        </a>
+          <ul>
+                      
+      <li>
+        <a href="/en/global-journey/welcome">
+          Welcome
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/global-journey/practical">
+          Practical
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/global-journey/packages">
+          Travel Packages
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/global-journey/experiences">
+          Experiences
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="/en/global-journey/hotels">
+          Hotels
+                  </a>
+        
+      </li>
+      </ul>
+
+      </li>
+                      
+      <li>
+        <a href="https://faq.tomorrowland.com/hc/en-us" target="_blank">
+          FAQ
+                  </a>
+        
+      </li>
+                      
+      <li>
+        <a href="https://my.tomorrowland.com/" target="_blank">
+          My Tomorrowland
+                  </a>
+        
+      </li>
+      </ul>
+
+      </nav>
+    </div>
+  </div>
+</div>
+
+      
+      <div class="content-wrapper">
+
+                  <header class="header">
+
+          
+  
+
+  
+  
+  
+
+
+
+<div class="header-image"
+            data-lazy-image="/src/Frontend/Files/pages/cover/2000x/line-up-en-65532d88d6ca0.jpg"
+                 >
+  <div class="header-color"
+       style="background-image: linear-gradient(45deg, rgba(184,0,0,0.36), rgba(0,10,89,0.36))">
+  </div>
+</div>
+  
+</header>
+        
+                              <div class="navbar-wrapper">
+              <div class="container">
+                
+  <nav class="navbar navbar-sections">
+    <a class="section-logo section-logo--festival" href="/en/festival"
+      title="Festival"> <span>Tomorrowland</span> Belgium
+    </a>
+
+      <ul class="nav navbar-nav">
+          <li class="festival active">
+        <a href="/en/festival/welcome" title="Festival">
+          <span>Festival</span>
+        </a>
+      </li>
+          <li class="dreamville">
+        <a href="/en/dreamville/welcome" title="DreamVille">
+          <span>DreamVille</span>
+        </a>
+      </li>
+          <li class="global-journey">
+        <a href="/en/global-journey/welcome" title="Global Journey">
+          <span>Global Journey</span>
+        </a>
+      </li>
+          <li class="faq mobile-only">
+        <a href="https://faq.tomorrowland.com/hc/en-us" title="FAQ" target="_blank">
+          <span>FAQ</span>
+        </a>
+      </li>
+          <li class="my-tomorrowland">
+        <a href="https://my.tomorrowland.com/" title="My Tomorrowland" target="_blank">
+          <span>My Tomorrowland</span>
+        </a>
+      </li>
+      </ul>
+
+
+    <div class="navbar__languages">
+                              
+      <ul class="lang-nav">
+              <li class="selected">
+          <a>EN</a>
+        </li>
+              <li>
+          <a href="/nl/festival/line-up">NL</a>
+        </li>
+              <li>
+          <a href="/fr/festival/line-up">FR</a>
+        </li>
+          </ul>
+      </div>
+  </nav>
+
+  
+  <nav class="navbar navbar-full">
+      <ul class="nav navbar-nav navbar-right">
+                                  
+        <li>
+          <a href="/en/festival/welcome" >
+            Welcome
+          </a>
+        </li>
+                                        
+        <li>
+          <a href="/en/festival/practical" >
+            Practical
+          </a>
+        </li>
+                                        
+        <li>
+          <a href="/en/festival/ticket-sales" >
+            Ticket Sales
+          </a>
+        </li>
+                                        
+        <li>
+          <a href="/en/festival/tickets" >
+            Tickets 
+          </a>
+        </li>
+                                        
+        <li class="active">
+          <a href="/en/festival/line-up" >
+            Line-up
+          </a>
+        </li>
+                                        
+        <li class="cta-list-item">
+          <a href="/en/my-tomorrowland"  target="_blank">
+            Pre-Register Now
+          </a>
+        </li>
+            </ul>
+
+  </nav>
+
+
+
+
+              </div>
+            </div>
+                  
+
+        
+  <div class="middle-wrapper">
+    <div class="container">
+              
+  <div class="row row-top">
+
+    <div class="col-md-12">
+
+                              <div class="section-title text-center">
+            <h1>Line-Up</h1>
+
+          </div>
+              
+    </div>
+
+  </div>
+
+      
+                    
+          </div>
+  </div>
+
+    
+
+            <div class="text">
+        <script type="module" src="https://components.tomorrowland.com/en-us/tml-lineup/lineup-base.js"></script>
+
+<tml-lineup></tml-lineup>
+      </div>
+      
+
+  <div class="middle-wrapper">
+    <div class="container">
+      
+  <div class="row row-sublinks row-center">
+
+    <div class="col-md-12">
+
+      <div class="sublinks-container">
+                  <div class="sublink-heading">
+  <h2 data-ft-label="Title" data-ft-type="text">You might like this</h2>
+</div>
+
+                  <div class="sublink-subtle">
+  <a href="/en/festival/line-up/listen-to-the-latest-tomorrowland-friendship-mixes" class="text-box text-box--image fade-in is-animated" data-ft-label="Link" data-ft-type="link-without-content">
+    <div class="text-box__image" data-src="/src/Frontend/Files/UserTemplate/tomorrowland-friendship-mixes.jpeg" data-ft-label="Image" data-ft-type="image-background" style="background-image: url(&quot;/src/Frontend/Files/UserTemplate/tomorrowland-friendship-mixes.jpeg&quot;);"></div>
+    <div class="text-box__text">
+      <h3 data-ft-label="Title" data-ft-type="text">Friendship Mixes</h3>
+      <div data-ft-label="Description" data-ft-type="editor"><p><br>
+Listen to the latest Tomorrowland Friendship mixes<br>
+&nbsp;</p>
+</div>
+      <div class="arrow-square"></div>
+    </div>
+  </a>
+</div>
+
+                  <div class="sublink-subtle">
+  <a href="/en/festival/line-up/tomorrowland-news-music" class="text-box text-box--image fade-in is-animated" data-ft-label="Link" data-ft-type="link-without-content">
+    <div class="text-box__image" data-src="/src/Frontend/Files/UserTemplate/tomorrowland-homepage.jpeg" data-ft-label="Image" data-ft-type="image-background" style="background-image: url(&quot;/src/Frontend/Files/UserTemplate/tomorrowland-homepage.jpeg&quot;);"></div>
+    <div class="text-box__text">
+      <h3 data-ft-label="Title" data-ft-type="text">News &amp; Music</h3>
+      <div data-ft-label="Description" data-ft-type="editor"><p><br>
+Enjoy everything Tomorrowland has to offer and stay up-to-date on the latest news</p>
+</div>
+      <div class="arrow-square"></div>
+    </div>
+  </a>
+</div>
+
+                  <div class="sublink-subtle">
+  <a href="/en/festival/line-up/tomorrowland-store-official-tomorrowland-fashion-merchandise" class="text-box text-box--image fade-in is-animated" data-ft-label="Link" data-ft-type="link-without-content">
+    <div class="text-box__image" data-src="/src/Frontend/Files/UserTemplate/tml-by-tomorrowland.jpeg" data-ft-label="Image" data-ft-type="image-background" style="background-image: url(&quot;/src/Frontend/Files/UserTemplate/tml-by-tomorrowland.jpeg&quot;);"></div>
+    <div class="text-box__text">
+      <h3 data-ft-label="Title" data-ft-type="text">Tomorrowland Store</h3>
+      <div data-ft-label="Description" data-ft-type="editor"><p>Fashion for the People of Tomorrow. Discover official collections where happiness awaits in every fiber</p>
+</div>
+      <div class="arrow-square"></div>
+    </div>
+  </a>
+</div>
+
+                  <div class="sublink-subtle">
+  <a href="/en/festival/line-up/one-world-radio-the-sound-of-tomorrowland" class="text-box text-box--image fade-in is-animated" data-ft-label="Link" data-ft-type="link-without-content">
+    <div class="text-box__image" data-src="/src/Frontend/Files/UserTemplate/one-world-radio.jpeg" data-ft-label="Image" data-ft-type="image-background" style="background-image: url(&quot;/src/Frontend/Files/UserTemplate/one-world-radio.jpeg&quot;);"></div>
+    <div class="text-box__text">
+      <h3 data-ft-label="Title" data-ft-type="text">One World Radio</h3>
+      <div data-ft-label="Description" data-ft-type="editor"><p><br>
+Discover shows with Armin van Buuren, NERVO, Timmy Trumpet and so much more!</p>
+</div>
+      <div class="arrow-square"></div>
+    </div>
+  </a>
+</div>
+
+              </div>
+
+    </div>
+
+  </div>
+
+
+          </div>
+  </div>
+
+
+        <div class="container container--footer">
+  <div class="container__content">
+    <footer id="footer" class="footer">
+      <a href="/">
+        <img alt="" class="footer__logo" src="/src/Frontend/Themes/tomorrowland/Core/Layout/images/common/logo-footer.svg" />
+      </a>
+      <div class="footer__social-navigation">
+        <ul>
+                      <li><a target="_blank" href="https://www.facebook.com/tomorrowland" class="icon icon--facebook">Facebook</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/tomorrowland/" class="icon icon--instagram">Instagram</a></li>
+            <li><a target="_blank" href="https://twitter.com/tomorrowland" class="icon icon--twitter">Twitter</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/user/TomorrowlandChannel" class="icon icon--youtube">YouTube</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@tomorrowland" class="icon icon--tiktok">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="footer__meta-navigation">
+        <ul>
+          <li>&copy;2024 Tomorrowland</li>
+          <li><a href="/en/website-terms-of-use" target="_blank">Website Terms of Use</a></li>
+
+                      <li><a href="/privacy">Privacy Policy</a></li>
+          
+                      <li><a href="/en/festival/ticket-sales/general-terms-conditions">Terms &amp; Conditions</a></li>
+          
+                      <li><a href="/en/faq-contact">FAQ &amp; Contact</a></li>
+                  </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+    <script type="module" src="https://components.tomorrowland.com/en-us/tml-topbar/topbar-base.js"></script>
+
+<script src="https://cdn.assets.tomorrowland.com/scripts/jquery-1.12.4.min.js?201804192210"></script>
+<script src="/js/all.min.js?202308011650"></script>
+
+<script>console.log('%cInterested in a development job at Tomorrowland? Q2hlY2sgb3VyIExpbmtlZEluIHBhZ2Ugb24gaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL3Bvc3RzL3RvbW9ycm93bGFuZF9qb2ItYWxlcnRzLWF0LXRvbW9ycm93bGFuZC1hY3Rpdml0eS02NTg3OTY5NDA1NDg3OTkyODMyLURiS0I=', 'font-size: 20px; color: white; background: black')</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCP8Z6Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  
+</body>
+</html>
