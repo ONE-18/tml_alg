@@ -9,7 +9,10 @@ import requests
 from bs4 import BeautifulSoup
 
 def generar_url():
-    url_base = 'https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day='
+    url = 'https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day=19/07/2024'
+    
+    # url_base = 'https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day='
+    url_base = url[:]   # TODO revisar
 
     fecha = datetime.strptime('19/07/2024', '%d/%m/%Y')
 
