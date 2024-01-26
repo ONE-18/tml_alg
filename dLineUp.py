@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -11,10 +11,9 @@ from bs4 import BeautifulSoup
 def generar_url():
     url = 'https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day=19/07/2024'
     
-    # url_base = 'https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day='
-    url_base = url[:]   # TODO revisar
+    url_base = url[:-10] 
 
-    fecha = datetime.strptime('19/07/2024', '%d/%m/%Y')
+    fecha = datetime.strptime(url[-10:], '%d/%m/%Y')
 
     for i in range(6):
         if i == 3:
@@ -40,38 +39,57 @@ def descargar_html(url):
         print ("Something went wrong:",err)
 
 
-# def descargarLineUp(driver): 
-#     pass
+def descargarLineUp(texto):
+    empezar = False
+    ret = []
+    for line in texto.split('\n'):
+        if empezar:
+            for art in line.split(' • '):
+                ret.append(art)
+        if 'ARTISTS' == line:
+            empezar = True
+    return ret
 
-# def scrap():
-#     options = webdriver.ChromeOptions()
-#     # options.add_argument('--headless')
+def scrap():
+    options = webdriver.ChromeOptions()
+    # options.add_argument('--headless')
+    options.add_experimental_option('detach', False)
     
-#     driver = webdriver.Chrome(options=options)
-#     driver.get('https://www.tomorrowland.com/en/festival/line-up?weekend=W1&day=19/07/2024')
+    driver = webdriver.Chrome(options=options)
     
-#     wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 10)
     
-#     lineUp = []
+    lineUp = []
     
-#     for i in range(2):      # iterar entre los 2 fines de semana
+    for url in generar_url():      # iterar entre los 2 fines de semana
         
-#         wait.until(EC.presence_of_element_located((By.XPATH, '//tml-lineup')))
+        driver.get(url)
+        sleep(1)
+        t = wait.until(EC.presence_of_element_located((By.XPATH, '//tml-lineup'))).text
         
-#         lineUp.append(descargarLineUp(driver))
+        for art in descargarLineUp(t):
+            if art not in lineUp:
+                lineUp.append(art)
 
-#         for j in range(3):  # iterar entre los 3 días de cada fin de semana
-#             botones = driver.find_elements(By.XPATH,'//*[@id="lineup"]/')
-#             wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[2]/div[3]/tml-lineup//div/div[2]/button[2]'))).click()
+    with open('lineUp.txt', 'w') as f:
+        for artista in sorted(lineUp):
+            f.write(artista + '\n')
         
-#             lineUp.append(descargarLineUp(driver))
-        
-#         wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div[2]/div[3]/tml-lineup//div/div[1]/button[2]'))).click()
+    print(len(lineUp))
+    
+    driver.close()
+    driver.quit()
+
+def comprobar_conexion(url):
+    try:
+        response = requests.get(url)
+        # Verificar si la respuesta tiene un código de estado 2xx (éxito)
+        response.raise_for_status()
+        print(f"Conexión exitosa a {url}")
+        return True
+    except requests.exceptions.RequestException as e:
+        print(f"No se pudo conectar a {url}. Error: {e}")
+        return False
 
 if __name__ == '__main__':
-    
-    generador = generar_url()
-    for url in generador:
-        with open('html.txt', 'w') as file:
-            file.write(descargar_html(url))
-    # html = descargar_html(url)
+    scrap()
