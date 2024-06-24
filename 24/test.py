@@ -36,15 +36,14 @@ driver = webdriver.Edge(service=service)
 # Array de URLs
 urls = ['https://belgium.tomorrowland.com/en/line-up/?day=2024-07-19','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-20','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-21']
 
-# Función para extraer datos de una URL
 def extract_data(url):
     driver.get(url)
     driver.implicitly_wait(10)  # Esperar hasta 10 segundos para que los elementos se carguen
-    
+    sleep(1)
     data = []
     
     # Encontrar los divs especificados
-    divs = driver.find_elements(By.CSS_SELECTOR, 'div.planby-program-stack')
+    divs = driver.find_elements(By.CSS_SELECTOR, 'div.planby-program')
     print(len(divs))
     for div in divs:
         style = div.get_attribute('style')
@@ -65,77 +64,62 @@ def extract_data(url):
     
     return data
 
-def get_stage():
-    # driver.get(url)
-    # driver.implicitly_wait(10)  # Esperar hasta 10 segundos para que los elementos se carguen
-    
-    data = []
-    
-    # Encontrar los divs especificados
-    divs = driver.find_elements(By.CSS_SELECTOR, 'div._channel_1edec_1')
-    
-    for div in divs:
-        titulo = div.text
-        
-        data.append({
-            'titulo': titulo,
-        })
-    
-    return data
+# for data in extract_data(urls[0]):
+#     if (data.get('top') == '0px'):
+#         print(data)
 
-# Inicializa la base de datos
-sqlito.IniBB()
+driver.get(urls[0])
+driver.implicitly_wait(10)
+table = driver.find_element(By.CSS_SELECTOR, 'div.planby-content')
 
-# Lista para almacenar todos los resultados temporalmente
-all_data = []
+# Inicializar una lista para almacenar los datos de la tabla
+table_data = []
 
-# Iterar sobre las URLs y extraer datos
-for url in urls:
-    data = extract_data(url)
-    all_data.extend(data)
-    sleep(1+random()*2)  # Esperar entre 1 y 3 segundos
+# Obtener la altura y el ancho inicial de la tabla
+last_height = driver.execute_script("return arguments[0].scrollHeight", table)
+last_width = driver.execute_script("return arguments[0].scrollWidth", table)
 
+while True:
+    # Desplazarse hacia abajo hasta el final de la tabla
+    driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", table)
+    sleep(2)  # Esperar a que se cargue el contenido
 
-cur.execute('''DELETE FROM Escenario''')
-i = 1
-for escenario in get_stage():
-    t = escenario['titulo']
-    # print(t)
-    cur.execute('''INSERT INTO Escenario (id, Nombre) VALUES (?, ?)''', (i ,t))
-    conn.commit()
-    i += 1
+    # Obtener la altura actual de la tabla después del desplazamiento
+    new_height = driver.execute_script("return arguments[0].scrollHeight", table)
 
-# Cerrar el navegador
-driver.close()
+    # Desplazarse horizontalmente hacia la derecha
+    while True:
+        driver.execute_script("arguments[0].scrollLeft += 100", table)  # Desplazarse hacia la derecha
+        sleep(2)  # Esperar a que se cargue el contenido
+
+        # Obtener el nuevo ancho de la tabla después del desplazamiento
+        new_width = driver.execute_script("return arguments[0].scrollWidth", table)
+
+        # Obtener las filas y celdas de la tabla cargadas actualmente
+        rows = table.find_elements(By.TAG_NAME, "tr")
+        for row in rows:
+            cells = row.find_elements(By.TAG_NAME, "td")
+            row_data = [cell.text for cell in cells]
+            table_data.append(row_data)
+
+        # Verificar si el ancho de la tabla ha cambiado
+        if new_width == last_width:
+            break  # Si no ha cambiado, salir del bucle
+        last_width = new_width
+
+    # Verificar si la altura de la tabla ha cambiado
+    if new_height == last_height:
+        print('No hay cambio')
+        break  # Si no ha cambiado, salir del bucle
+    last_height = new_height
+
 driver.quit()
 
-act = []
+# Mostrar los datos de la tabla
+for row in table_data:
+    print(row)
 
-# Imprimir los resultados
-for entry in all_data:
-    # print(entry)
-    dia = entry['url'].split('=')[1]
-    comienzo = dia + " " + entry['hora'].split(' - ')[0]
-    final = dia + " " + entry['hora'].split(' - ')[1]
-    nombre = entry['titulo']
-    h = entry['top']
-    
-    act.append((nombre, comienzo, final, h))
 
-act.sort(key=itemgetter(3))
 
-escenarios = cur.execute('SELECT Nombre FROM Escenario').fetchall()
-cur.execute('''DELETE FROM Actuación''')
-i = 0
 
-for k, gr in groupby(act, key=itemgetter(3)):
-    escenario = escenarios[i]
-    
-    for a in gr:
-        cur.execute('''INSERT INTO Actuación 
-                (Artista, Escenario, HoraInicio, HoraFin) 
-                VALUES (?, ?, ?, ?)''', (a[0], escenario[0], a[1], a[2]))
-        conn.commit()   
-    i += 1
 
-conn.close()
