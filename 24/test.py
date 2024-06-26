@@ -16,22 +16,24 @@ cur = conn.cursor()
 
 # Configurar las opciones del navegador
 chrome_options = Options()
-chrome_options.add_argument("--headless")  # Ejecutar en modo headless para no abrir el navegador
+# chrome_options.add_argument("--headless")  # Ejecutar en modo headless para no abrir el navegador
+chrome_options.add_argument("--maximized")  # Maximizar la ventana del navegador
 
 # Crear opciones para Microsoft Edge
 edge_options = Options()
-edge_options.add_argument("--headless")  # Ejecutar en modo headless
-edge_options.add_argument("--disable-gpu")  # Desactivar la GPU para modo headless
-edge_options.add_argument("--no-sandbox")  # Deshabilitar el sandbox
+# edge_options.add_argument("--headless")  # Ejecutar en modo headless
+# edge_options.add_argument("--disable-gpu")  # Desactivar la GPU para modo headless
+# edge_options.add_argument("--no-sandbox")  # Deshabilitar el sandbox
+edge_options.add_argument("--start-maximized")  # Maximizar la ventana del navegador
 
 # Configurar el servicio del ChromeDriver
-# service = Service(ChromeDriverManager().install()
+# service = Service(ChromeDriverManager().install())
 service = Service(EdgeChromiumDriverManager().install())
 
 
 # Iniciar el navegador
 # driver = webdriver.Chrome(service=service, options=chrome_options)
-driver = webdriver.Edge(service=service)
+driver = webdriver.Edge(options=edge_options)
 
 # Array de URLs
 urls = ['https://belgium.tomorrowland.com/en/line-up/?day=2024-07-19','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-20','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-21']

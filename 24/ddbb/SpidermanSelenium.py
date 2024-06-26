@@ -10,6 +10,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import sqlito
+import completarBB
 
 conn = sqlite3.connect('bb.db')
 cur = conn.cursor()
@@ -20,18 +21,17 @@ chrome_options.add_argument("--headless")  # Ejecutar en modo headless para no a
 
 # Crear opciones para Microsoft Edge
 edge_options = Options()
-edge_options.add_argument("--headless")  # Ejecutar en modo headless
-edge_options.add_argument("--disable-gpu")  # Desactivar la GPU para modo headless
-edge_options.add_argument("--no-sandbox")  # Deshabilitar el sandbox
+# edge_options.add_argument("--headless")  # Ejecutar en modo headless
+# edge_options.add_argument("--disable-gpu")  # Desactivar la GPU para modo headless
+# edge_options.add_argument("--no-sandbox")  # Deshabilitar el sandbox
+edge_options.add_argument("--start-maximized")  # Maximizar la ventana del navegador
 
 # Configurar el servicio del ChromeDriver
 # service = Service(ChromeDriverManager().install()
-service = Service(EdgeChromiumDriverManager().install())
-
 
 # Iniciar el navegador
 # driver = webdriver.Chrome(service=service, options=chrome_options)
-driver = webdriver.Edge(service=service)
+driver = webdriver.Edge(options=edge_options)
 
 # Array de URLs
 urls = ['https://belgium.tomorrowland.com/en/line-up/?day=2024-07-19','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-20','https://belgium.tomorrowland.com/en/line-up/?day=2024-07-21']
@@ -44,7 +44,7 @@ def extract_data(url):
     data = []
     
     # Encontrar los divs especificados
-    divs = driver.find_elements(By.CSS_SELECTOR, 'div.planby-program-stack')
+    divs = driver.find_elements(By.CSS_SELECTOR, 'div.planby-program')
     print(len(divs))
     for div in divs:
         style = div.get_attribute('style')
@@ -94,7 +94,8 @@ for url in urls:
     data = extract_data(url)
     all_data.extend(data)
     sleep(1+random()*2)  # Esperar entre 1 y 3 segundos
-
+# data = extract_data(urls[0])
+# all_data.extend(data)
 
 cur.execute('''DELETE FROM Escenario''')
 i = 1
@@ -139,3 +140,5 @@ for k, gr in groupby(act, key=itemgetter(3)):
     i += 1
 
 conn.close()
+
+completarBB.completarBB()

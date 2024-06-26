@@ -15,7 +15,7 @@ def IniBB():
     # Crear una tabla
     cur.execute('''CREATE TABLE IF NOT EXISTS Artista (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        Nombre VARCHAR(50)
+        Nombre VARCHAR(50) UNIQUE
     )
     ''')
 
@@ -34,7 +34,7 @@ def IniBB():
     cur.execute('''
         CREATE TABLE IF NOT EXISTS Escenario (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        Nombre VARCHAR(50),
+        Nombre VARCHAR(50)  UNIQUE,
         Localización VARCHAR(50)
     )
     ''')
@@ -43,7 +43,7 @@ def IniBB():
         CREATE TABLE IF NOT EXISTS Distancia (
         idEsc1 INTEGER,
         idEsc2 INTEGER,
-        Distnacia FLOAT,
+        Distancia FLOAT,
         Tiempo FLOAT,
         FOREIGN KEY (idEsc1) REFERENCES Actuación(id),
         FOREIGN KEY (idEsc2) REFERENCES Escenario(id)
@@ -53,3 +53,6 @@ def IniBB():
     # Confirmar los cambios y cerrar la conexión
     conn.commit()
     conn.close()
+    
+if __name__ == '__main__':
+    IniBB()
