@@ -25,6 +25,18 @@ def seleccionar_artistas(artistas):
     print("Selecciona los artistas que quieres ver (por ID), separados por comas:")
     seleccion = input("IDs de artistas: ")
     seleccionados = seleccion.split(',')
+   
+    return seleccionados
+
+def seleccionar_artistas_prioridades(artistas):
+    with open('artistas.txt', 'w', encoding='utf') as f:
+        for artista in artistas:
+            print(f"{artista[0]}: {artista[1]}")
+            f.write(f"{artista[0]}: {artista[1]}\n")
+            
+    print("Selecciona los artistas que quieres ver (por ID), separados por comas:")
+    seleccion = input("IDs de artistas: ")
+    seleccionados = seleccion.split(',')
     prioridades = {}
     
     for id_artista in seleccionados:
