@@ -40,6 +40,7 @@ urls = ['https://belgium.tomorrowland.com/en/line-up/?day=2024-07-19','https://b
 def extract_data(url):
     driver.get(url)
     driver.implicitly_wait(10)  # Esperar hasta 10 segundos para que los elementos se carguen
+    driver.execute_script("document.body.style.zoom='50%'")
     
     data = []
     
