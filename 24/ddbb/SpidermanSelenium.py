@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.common.keys import Keys
 import sqlito
 import completarBB
 
@@ -41,7 +42,13 @@ def extract_data(url):
     driver.get(url)
     driver.implicitly_wait(10)  # Esperar hasta 10 segundos para que los elementos se carguen
     driver.execute_script("document.body.style.zoom='50%'")
-    
+
+    # Scroll hacia abajo
+    body = driver.find_element(By.TAG_NAME, 'body')
+    for _ in range(10):
+        body.send_keys(Keys.DOWN)
+        sleep(0.3)  # Espera para cargar los elementos
+        
     data = []
     
     # Encontrar los divs especificados
@@ -126,17 +133,17 @@ for entry in all_data:
 
 act.sort(key=itemgetter(3))
 
-escenarios = cur.execute('SELECT Nombre FROM Escenario').fetchall()
+escenarios = cur.execute('SELECT * FROM Escenario').fetchall()
 cur.execute('''DELETE FROM Actuación''')
 i = 0
 
 for k, gr in groupby(act, key=itemgetter(3)):
-    escenario = escenarios[i]
+    escenario = escenarios[i][1]
     
     for a in gr:
         cur.execute('''INSERT INTO Actuación 
                 (Artista, Escenario, HoraInicio, HoraFin) 
-                VALUES (?, ?, ?, ?)''', (a[0], escenario[0], a[1], a[2]))
+                VALUES (?, ?, ?, ?)''', (a[0], escenario, a[1], a[2]))
         conn.commit()   
     i += 1
 
